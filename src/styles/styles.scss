@@ -18,7 +18,6 @@ body {
   width: 1640px;
   min-width: 1640px;
   margin: 0 auto;
-  position: relative;
   @media (max-width: 1440px) {
     width: 1280px;
     min-width: 1280px;
@@ -42,6 +41,7 @@ header {
   width: 100%;
   position: absolute;
   z-index: 10;
+  top: 0px;
   .inner-header {
     display: flex;
     align-items: center;
@@ -76,31 +76,55 @@ header {
 //banner
 
 .banner {
-  height: 100vh;
   display: flex;
   align-items: center;
-  position: relative;
   background-color: $white;
-  .main-text {
-    font-size: 4.8rem;
-    text-transform: uppercase;
-    letter-spacing: 32px;
-    font-weight: 700;
-    color: $white;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    mix-blend-mode: difference;
-    z-index: 9;
-  }
-  .main-image {
-    width: 536px;
-    margin: 0 auto;
-    @media (max-width: 1440px) {
-      width: 436px;
+  height: 100vh;
+  position: relative;
+  .row {
+    position: relative;
+    .main-text {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      letter-spacing: 42px;
+      font-weight: 700;
+      color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 9;
     }
+    .main-image {
+      width: 536px;
+      margin: 0 auto;
+      @media (max-width: 1440px) {
+        width: 436px;
+      }
+    }
+    .side-image {
+      width: 260px;
+      position: absolute;
+      &.left {
+        left: 168px;
+        top: 12px;
+      }
+      &.right {
+        right: 168px;
+        bottom: 12px;
+      }
+    }
+  }
+  .scroll {
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color: $black;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 48px;
   }
 }
