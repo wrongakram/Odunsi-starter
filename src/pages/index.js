@@ -1,16 +1,14 @@
 import React from "react"
-
-import Header from "../components/header"
-import Banner from "../components/banner"
-
+import { Link } from "gatsby"
 //scss
 import "../styles/styles.scss"
+// Normalize is optional up to you
 import "normalize.css"
 
 const IndexPage = () => (
   <div>
-    <Header />
-    <Banner />
+    <h1>Hi from the home page</h1>
+    <Link to="/page-2">Go to page 2</Link>
   </div>
 )
 
