@@ -97,6 +97,10 @@ header {
       text-align: center;
       mix-blend-mode: difference;
       z-index: 9;
+      @media (max-width: 1440px) {
+        font-size: 4.4rem;
+        letter-spacing: 36px;
+      }
     }
     .main-image {
       width: 536px;
@@ -108,18 +112,29 @@ header {
     .side-image {
       width: 260px;
       position: absolute;
+      @media (max-width: 1440px) {
+        width: 208px;
+      }
       &.left {
         left: 168px;
         top: 12px;
+        @media (max-width: 1440px) {
+          left: 128px;
+          top: 24px;
+        }
       }
       &.right {
         right: 168px;
         bottom: 12px;
+        @media (max-width: 1440px) {
+          right: 128px;
+        }
       }
     }
   }
   .scroll {
     font-weight: 700;
+    font-size: 0.875rem;
     text-decoration: none;
     letter-spacing: 1.5px;
     color: $black;
